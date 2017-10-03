@@ -22,11 +22,27 @@ def step_impl(context):
     password.send_keys("pass")
     time.sleep(pause)
     context.browser.find_element_by_id('submit').click()
+    time.sleep(pause)
 
 
 @then("I should see the welcome page")
 def step_impl(context):
     assert context.browser.title == "Scuba Portugal - Welcome"
+
+
+@then('I should not see Login link')
+def step_impl(context):
+    element = context.browser.find_element_by_id('login')
+    value = element.get_attribute('style')
+    print(value)
+    print(element)
+    if value != 'display: none':
+       assert False
+
+
+@then('I should see Logout link')
+def step_impl(context):
+    assert context.browser.find_element_by_id('logout')
 
 
 @when("I enter an invalid username or password")

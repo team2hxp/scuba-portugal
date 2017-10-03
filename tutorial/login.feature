@@ -8,6 +8,8 @@ Feature: User Login
     Given I am on the login page
     When I enter a valid username and password
     Then I should see the welcome page
+    And I should not see Login link
+    And I should see Logout link
 
   Scenario: Failing Login
     Given I am on the login page
@@ -20,3 +22,4 @@ Feature: User Login
     When I am missing a username
     Then I expect to be on the login page
     And I expect to see an missing field error
+
