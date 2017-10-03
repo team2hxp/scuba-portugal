@@ -2,7 +2,7 @@
 Demonstration site
 
 # team
-Team 2 is ready
+team2funname
 
 ## Init (virtual) env
 ```
