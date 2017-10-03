@@ -8,8 +8,8 @@ Feature: User Login
     Given I am on the login page
     When I enter a valid username and password
     Then I should see the welcome page
-#    And I should see Logout link
-#    And I should not see Login link
+    And I should see Logout link
+    And I should not see Login link
 
   Scenario: Failing Login
     Given I am on the login page
