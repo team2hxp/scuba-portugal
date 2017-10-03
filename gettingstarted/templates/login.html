@@ -49,6 +49,10 @@
         if (theUsername == "user" && thePassword == "pass") {
             document.getElementById("message").innerHTML = "Welcome";
             window.location.href = "welcome.html";
+	    var link_login = document.getElementById('login');
+            link_login.style.display = 'none';
+	    var link_logout = document.getElementById('logout');
+            link_logout.style.display = 'block';
         }
         else if (theUsername.length == 0) {
             document.getElementById("message").innerHTML = "Missing Username"
